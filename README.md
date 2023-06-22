@@ -1,1 +1,1 @@
-# jdsc-fe-gc-javascript-functions-22-06-2023
+# jdsc-fe-gc-js-functions-22-06-2023
