@@ -10,7 +10,7 @@ let cantidadNúmeros = parseInt(prompt('Introduce la cantidad de números que qu
 const Randomizer = (newNumeroMini, newNumeroMax) =>{
     let numeroAleatorios = Math.floor(Math.random() * (newNumeroMax - newNumeroMini + 1)) + newNumeroMini;
     return numeroAleatorios;
-};
+}
 
 for (let i = 0; i < cantidadNúmeros; i++) {
         let numero = Randomizer(numeroMínimo, numeroMáximo);

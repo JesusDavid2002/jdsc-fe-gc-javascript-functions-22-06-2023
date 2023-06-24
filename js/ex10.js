@@ -6,20 +6,24 @@ let arrayNumero = prompt('Introduce el tamaño del array: ');
 let random = [];
 let primos = [];
 
-const ComprobadorPrimos = (newLongitud, newRandom) => {
-    
-    for (let i = 2; i < newLongitud; i++) {
-        newRandom = Math.floor(Math.random()*10);
+const Operaciones = (newLongitud, newRandom) => {
+    for (let i = 0; i < newLongitud; i++) {
+        newRandom = Math.floor(Math.random()*50) + 1;
         console.log(newRandom);
-        if (newRandom % i === 0) {
-            // return false;
-            
-            // primos.push(newRandom);
-            // console.log(primos);
+        if(comprobadorPrimo(newRandom)){
+            primos.push(newRandom);
         }
-        
     }
-    // return primos;
+    return primos;
 }
 
-console.log(ComprobadorPrimos(arrayNumero, random));
+const comprobadorPrimo = (newNumero) =>{
+    for (let i = 2; i <= Math.sqrt(newNumero); i++) {
+        if(newNumero % i === 0){
+            return false;
+        }
+    }
+    return true;
+} 
+
+console.log(Operaciones(arrayNumero, random));

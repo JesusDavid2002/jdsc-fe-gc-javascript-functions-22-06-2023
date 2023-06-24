@@ -7,6 +7,6 @@ const Contador = (newNumero) =>{
     for (let i = 0; i < newNumero; i++) {
         console.log(`El número de cifras del número ${newNumero} son ${newNumero.length}`);
     }
-};
+}
 
 Contador(numero);

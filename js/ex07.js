@@ -26,6 +26,6 @@ const ConvertidorMonedas = (euros, moneda) => {
             break;
     }
     alert(`El cambio de euros a ${moneda} es de ${cambio}`);
-};
+}
 
 ConvertidorMonedas(monedaEuro, tipoMoneda);

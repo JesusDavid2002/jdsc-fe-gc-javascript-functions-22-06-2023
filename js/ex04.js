@@ -10,7 +10,7 @@ const Factorización = (factor) => {
     for (let i = 1; i <= factor; i++) {
         acumulador *= i;  
     }
-    return acumulador
+    return acumulador;
 }
 
 console.log(Factorización(numero));

@@ -9,9 +9,9 @@ const ConvertidorDecimalBinario = (decimal) => {
     let residuo = "";
     let binario = "";
     while (decimal > 0) {
-        residuo = decimal % 2
-        binario += residuo
-        decimal = Math.floor(decimal / 2)
+        residuo = decimal % 2;
+        binario += residuo;
+        decimal = Math.floor(decimal / 2);
     }
     return binario;
 }

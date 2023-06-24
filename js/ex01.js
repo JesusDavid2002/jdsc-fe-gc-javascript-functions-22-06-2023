@@ -13,16 +13,16 @@ const Operaciones = (newFigura) =>{
     switch (newFigura) {
         case "circulo":
             let radio = prompt('Introduce el radio del circulo: ');
-            resultadoFigura = (radio**2) * Math.PI
+            resultadoFigura = (radio**2) * Math.PI;
             break;
         case "triangulo":
             let base = prompt('Introduce la base del triangulo: ');
             let altura = prompt('Introduce la altura del triangulo: ');
-            resultadoFigura = (base * altura) / 2
+            resultadoFigura = (base * altura) / 2;
             break;
         case "cuadrado":
             let lado = prompt('Introduce el lado del cuadrado: ');
-            resultadoFigura = lado * lado
+            resultadoFigura = lado * lado;
             break;
         default:
             alert("No es una forma geométrica.");
