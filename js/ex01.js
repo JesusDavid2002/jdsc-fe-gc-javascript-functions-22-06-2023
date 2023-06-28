@@ -11,7 +11,7 @@ let figura = prompt('Que figura quiere calcular el área: circulo, triangulo o c
 const Operaciones = (newFigura) =>{
     let resultadoFigura = "";
     switch (newFigura) {
-        case "circulo":
+        case "circulo" :
             let radio = prompt('Introduce el radio del circulo: ');
             resultadoFigura = (radio**2) * Math.PI;
             break;

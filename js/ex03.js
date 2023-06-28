@@ -14,4 +14,8 @@ const Comprobador = (newNumero) => {
     return newNumero !==1;
 }
 
-console.log(Comprobador(numero));
+if (Comprobador(numero)){
+    console.log(`${numero} es un número primo.`);
+} else{
+    console.log(`${numero} no es un número primo.`);
+}

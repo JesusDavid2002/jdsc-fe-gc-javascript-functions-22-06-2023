@@ -3,19 +3,7 @@
 // hacer todos los métodos que necesites.
 
 let arrayNumero = prompt('Introduce el tamaño del array: ');
-let random = [];
-let primos = [];
 
-const Operaciones = (newLongitud, newRandom) => {
-    for (let i = 0; i < newLongitud; i++) {
-        newRandom = Math.floor(Math.random()*50) + 1;
-        console.log(newRandom);
-        if(comprobadorPrimo(newRandom)){
-            primos.push(newRandom);
-        }
-    }
-    return primos;
-}
 
 const comprobadorPrimo = (newNumero) =>{
     for (let i = 2; i <= Math.sqrt(newNumero); i++) {
@@ -26,4 +14,31 @@ const comprobadorPrimo = (newNumero) =>{
     return true;
 } 
 
-console.log(Operaciones(arrayNumero, random));
+const Operaciones = (newLongitud, minimo, maximo) => {
+  let random = [];
+    while (random.length < newLongitud) {
+        let numeroRandom = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+      
+        if(comprobadorPrimo(numeroRandom)){
+          random.push(numeroRandom);
+        }
+    }
+    return random;
+}
+
+const encontrarMayorNum = (arrayPrimos) => {
+  let numMayor = arrayPrimos[0];
+
+  for(let i = 1; i < arrayPrimos.length; i++){
+    if(arrayPrimos[i] > numMayor){
+      numMayor = arrayPrimos[i];
+    }
+  }
+  return numMayor;
+}
+
+let arrayPrimos = Operaciones(arrayNumero, 1, 100);
+let numMayor = encontrarMayorNum(arrayPrimos);
+
+console.log(`El array de primos de ${arrayNumero} contiene estos números primos: ${arrayPrimos}`);
+console.log(`Y el mayor número entre ellos es: ${numMayor}`);
